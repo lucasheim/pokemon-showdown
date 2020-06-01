@@ -12,12 +12,12 @@ describe.only('Sleep Talk', function () {
 
 	it('should be able to use moves that require previous damage received', function () {
 		battle = common.createBattle();
-		battle.setPlayer('p1', { team : [
+		battle.setPlayer('p1', {team: [
 			{species: 'Cyndaquil', moves: ['flamethrower']},
-			{species: 'Mew', item: 'focussash', moves: ['sleeptalk', 'metalburst']}
+			{species: 'Mew', item: 'focussash', moves: ['sleeptalk', 'metalburst']},
 		]});
-		battle.setPlayer('p2', { team : [
-			{species: 'Paras', moves: ['spore', 'bodyslam']}
+		battle.setPlayer('p2', {team: [
+			{species: 'Paras', moves: ['spore', 'bodyslam']},
 		]});
 		battle.makeChoices('switch 2', 'move spore');
 		assert.equal(battle.p1.active[0].status, 'slp');
